@@ -23,6 +23,7 @@ const birdData = [
     amount: 600,
     id: 1333,
   },
+  
   {
     img: "https://i.imgur.com/vHQizcwb.jpg",
     name: "Turaco",
