@@ -1,0 +1,55 @@
+
+*{
+    box-sizing: border-box;
+}
+
+
+.card{
+    display: flex;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    height: 100px;
+    width: 200px;
+    padding: 20px 10px;
+    text-align: center;
+    gap: 20px 50px;
+    border: solid 1px black;
+    margin: left;
+    background-color: rgb(152, 245, 245);
+    display: table;
+    float: left;
+    align-items: left
+    
+    
+    
+}
+
+.birds{
+    width: 175px;
+    height: 40px;
+    text-align: center
+    
+}
+.checkout{
+    border: solid black;
+    height: auto;
+    width: 300px;
+    background-color:white;
+    gap: 20px;
+    padding-bottom: 50px;
+    margin: 10px;
+    text-align: center;
+}
+
+.cart{
+ 
+    background-color: blueviolet;
+   }
+
+/* input[type=number]:focus, textarea:focus */
+
+@media screen and (max-width: 768px){
+    .card {
+        width: 100%;
+    }
+}
