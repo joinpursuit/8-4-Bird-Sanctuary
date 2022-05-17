@@ -29,28 +29,21 @@ const Cart = (props) => {
   } else {
     totalSum = total;
   }
-  // const handleRemove = (e) => {
-  //
-  // const name = e.target.getAttribute("name")
-  //  (adopt.filter(add => add.name !== name));
-  //
-  //
-  // }
-  //
+
+  const handleRemove = (e) => {
+    e.target.remove();
+  };
 
   return (
     <div className="Cart">
       <h1>Cart</h1>
       <h3>Discount: {discount()}%</h3>
       <h4>Total: ${totalSum}</h4>
-      <ol>
+      <ol onClick={ handleRemove }>
         {adopt.map((add) => {
-          return (
-            <li className="name">
-              {add}
-              <button>Delete</button>
-            </li>
-          );
+          return <li>{add}
+          <button>Delete</button>
+          </li>;
         })}
       </ol>
       <p>Your donations have qualified you for the following items</p>
