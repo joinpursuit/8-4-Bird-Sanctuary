@@ -31,7 +31,7 @@ const Cart = (props) => {
   }
 
   const handleRemove = (e) => {
-    e.target.remove();
+    e.target.parentNode.remove();
   };
 
   return (
@@ -39,11 +39,14 @@ const Cart = (props) => {
       <h1>Cart</h1>
       <h3>Discount: {discount()}%</h3>
       <h4>Total: ${totalSum}</h4>
-      <ol onClick={ handleRemove }>
+      <ol>
         {adopt.map((add) => {
-          return <li>{add}
-          <button>Delete</button>
-          </li>;
+          return (
+            <li>
+              {add}
+              <button onClick={handleRemove}>Delete</button>
+            </li>
+          );
         })}
       </ol>
       <p>Your donations have qualified you for the following items</p>

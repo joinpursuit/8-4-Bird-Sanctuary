@@ -15,7 +15,7 @@ const App = () => {
       {/* <h1>Hello, world!</h1> */}
       <Cart adopt={adopt} price={price} />
       <BirdsCards birds={birdData} setAdopt={setAdopt} setPrice={setPrice} />
-      <Checkout />
+      <Checkout setAdopt={setAdopt} setPrice={setPrice} />
     </div>
   );
 };

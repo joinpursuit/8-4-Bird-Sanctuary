@@ -11,7 +11,7 @@ const IndividualBird = (props) => {
   };
   return (
     <section className="card">
-      <div className="birds button">
+      <div className="birds">
         <h4>{name}</h4>
         <p>${amount}</p>
         <img src={img} alt={name} width="150px" />

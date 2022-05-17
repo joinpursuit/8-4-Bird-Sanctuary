@@ -2,7 +2,7 @@ import bonusItems from "../data/bonusItems";
 import React, { useState } from "react";
 const Bonus = (props) => {
   const { totalSum } = props;
-  if (totalSum > 1000) {
+  if (totalSum >= 1000) {
     return (
       <ul>
         <li>{bonusItems[0]}</li>
@@ -12,7 +12,7 @@ const Bonus = (props) => {
       </ul>
     );
   }
-  if (totalSum > 500) {
+  if (totalSum >= 500) {
     return (
       <ul>
         <li>{bonusItems[0]}</li>
@@ -22,7 +22,7 @@ const Bonus = (props) => {
     );
   }
 
-  if (totalSum > 300) {
+  if (totalSum >= 300) {
     return (
       <ul>
         <li>{bonusItems[0]}</li>
@@ -31,7 +31,7 @@ const Bonus = (props) => {
     );
   }
 
-  if (totalSum > 100) {
+  if (totalSum >= 100) {
     return (
       <ul>
         <li>{bonusItems[0]}</li>
