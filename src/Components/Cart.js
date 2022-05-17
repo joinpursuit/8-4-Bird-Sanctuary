@@ -1,31 +1,45 @@
 import react from "react";
-import { useState } from "react"
+import { useState } from "react";
 
+const Cart = ({ totalAmount, nameArr, bonusItems }) => {
+  const addBonusItem = (totalAmount, bonusItems) => {
+    if (totalAmount >= 100 && totalAmount <= 300) {
+      return <li>{bonusItems[0]}</li>;
+    } else if (totalAmount >= 300 && totalAmount <= 500) {
+      return (<li>{bonusItems[0]}</li>), (<li>{bonusItems[1]}</li>);
+    } else if (totalAmount >= 500 && totalAmount <= 1000) {
+      console.log(bonusItems[2]);
+    } else if (totalAmount > 1000) {
+      console.log(bonusItems[3]);
+    }
+  };
 
-//Cart is gonna be the laybout????
+  const printstff = () => {
+    console.log("asdadaihda");
+  };
 
-const Cart = (props) => {
-    const { totalAmount } = props;
+  return (
+    <div className="Cart" onChange={printstff}>
+      <h1>Cart</h1>
+      <p>Discount: {"0"}</p>
 
-// console.log(amount)
-//make a function called 
-// const addToTotal = (e) => {//keeps tabs on total. 
-//     const { value } = e.target;
-//     setTotal(value);
-// }
+      <p>Total: ${totalAmount}</p>
+      <ol>
+        {nameArr.map((name) => {
+          return <li>{name}</li>;
+        })}
+      </ol>
 
-return (
-<div>
-<h1>Cart</h1>
-<p>Total amount: {totalAmount}</p>
-<p>Discount:</p>
-{/* <button className="birds" onClick={console.log("addToCart")}>add to cart</button> */}
-</div>
-
-
-)
-
-
-}
+      <ul>
+        {/* {totalAmount >= 100 && totalAmount <= 300 ? <li>{bonusItems[0]}</li> : console.log('banna')  } */}
+        {/* <li>{addBonusItem(totalAmount, bonusItems)}</li> */}
+        {
+            
+            
+        }
+      </ul>
+    </div>
+  );
+};
 
 export default Cart;
