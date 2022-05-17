@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Checkout = () => {
+const Checkout = ({setCart}) => {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
@@ -10,14 +10,19 @@ const Checkout = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if(firstName && lastName && email && zipCode){
-            alert('You have adopted birds. Thank you!')
+            alert('You have adopted birds. Thank you!');
+            setFirstName('');
+            setLastName('');
+            setEmail('');
+            setZipCode('');
+            setCart([]);
         }else{
             alert('Fill out the whole form.')
         }
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='Checkout'>
             <h2>Checkout</h2>
             <label>
                 First Name
