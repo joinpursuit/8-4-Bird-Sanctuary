@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Checkout = ({setCart}) => {
+const Checkout = ({cart, setCart}) => {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
@@ -9,7 +9,7 @@ const Checkout = ({setCart}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if(firstName && lastName && email && zipCode){
+        if(firstName && lastName && email && zipCode && cart.length > 0){
             alert('You have adopted birds. Thank you!');
             setFirstName('');
             setLastName('');
@@ -17,7 +17,7 @@ const Checkout = ({setCart}) => {
             setZipCode('');
             setCart([]);
         }else{
-            alert('Fill out the whole form.')
+            alert('Fill out the whole form!')
         }
     }
 

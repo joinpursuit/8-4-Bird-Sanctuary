@@ -18,44 +18,23 @@ if (total >= 100 && total < 300) {
     bonus.push(bonusItems[0], bonusItems[1], bonusItems[2], bonusItems[3])
 }
 
-// const handleDelete = () =>{
-//   for(let i = 0; i < cart.length; i++){
-//     let index = cart.indexOf(cart[i]);
-//     if(index > -1){
-//       cart.splice(cart)
-//     }
-//   }
+const handleDelete = (i) =>{
+  const newCart = cart.filter(item => cart.indexOf(item) !== i);
+  setCart(newCart)
+}
 
-//   // cart.forEach(bird => {
-//   //   // console.log(cart.indexOf(bird))
-//   //   if(cart.indexOf(bird) > -1){
-//   //     cart.splice(bird, 1)
-//   //   }
-//   // })
-
-
-// //   let foundIndex = cart.indexOf((bird) => {
-// //     return bird;
-// // });
-
-// // console.log(foundIndex)
-
-// // if (foundIndex > -1) {
-// //     cart.splice(foundIndex, 1);
-// // }
-// }
 
   return (
     <div className="Cart">
-      <h2>Cart</h2>
-      <h4>Discount: {cart.length >= 3 ? 10 : 0}%</h4>
+      <h3>Cart</h3>
+      <h3>Discount: {cart.length >= 3 ? 10 : 0}%</h3>
       <h4>Total: ${total}</h4>
       <ol>
-        {cart.map((bird) => {
+        {cart.map((bird, i) => {
             return (
             <li>
               {bird.name}: ${bird.amount.toFixed(2)}
-              <button onClick={() => setCart([])}>x</button>
+              <button id={i} onClick={() => handleDelete(i)}>x</button>
             </li>
 
           );

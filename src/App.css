@@ -1,7 +1,6 @@
 .App{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: auto auto auto auto;
 }
 
 .birds{
@@ -11,6 +10,9 @@
     background-color: rgb(119, 195, 195);
     text-align: center;
     max-height: 500px;
+    grid-template-columns: auto auto auto;
+    grid-auto-rows: auto;
+    grid-auto-columns: auto;
 }
 
 .button{
@@ -19,8 +21,8 @@
 }
 
 .Cart{
-    grid-column: 1;
-    grid-row: 1/2;
+    grid-row-start: 1;
+    grid-row-end: 3;
     border: 1px solid black;
     padding: 5px;
     margin: 5px;
@@ -28,8 +30,8 @@
 }
 
 .Checkout{
-    grid-column: 1;
-    grid-row: 2/3;
+    grid-row-start: 3;
+    grid-row-end: 4;
     border: 1px solid black;
     padding: 5px;
     margin: 5px;
