@@ -8,6 +8,8 @@ import bonusItems from "./data/bonusItems";
 const App = () => {
   const [totalAmount, setTotalAmount] = useState("0");
   const [nameArr, setNameArr] = useState([]);//store name
+
+
   const [totalDiscount, setTotalDiscount] = useState("0");
   //state here - 
   const [currentBonus, setCurrentBonus] = useState([]);
@@ -16,7 +18,7 @@ const App = () => {
 return (
   <div>
     <h1>Bird Sanctuary</h1>
-    <Birds birds={birdData} setTotalAmount={setTotalAmount} totalAmount={totalAmount} setNameArr={setNameArr} bonusItems={bonusItems} currentBonus={currentBonus} setCurrentBonus={setCurrentBonus} />
+    <Birds birds={birdData} setTotalAmount={setTotalAmount} totalAmount={totalAmount} nameArr={nameArr} setNameArr={setNameArr} bonusItems={bonusItems} currentBonus={currentBonus} setCurrentBonus={setCurrentBonus} />
     <Cart totalAmount={totalAmount} nameArr={nameArr} bonusItems={bonusItems} totalDiscount={totalDiscount} setTotalDiscount={setTotalDiscount} currentBonus={currentBonus}/>
   </div>
 )
