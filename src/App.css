@@ -1,0 +1,19 @@
+.app{
+    display: grid;
+    grid-template-areas: "cart birdCards birdCards birdCards"
+                "cart birdCards birdCards birdCards"
+                "checkout birdCards birdCards birdCards"
+                "checkout birdCards birdCards birdCards";
+}
+
+.cart{
+    grid-area: cart;
+}
+
+.checkout{
+    grid-area: checkout;
+}
+
+.birdCards{
+    grid-area: birdCards;
+}

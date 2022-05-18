@@ -1,7 +1,23 @@
+import React, { useState } from "react"
+import Cart from "./components/Cart";
+import BirdCards from "./components/BirdCards";
+import Checkout from "./components/Checkout";
+import birdData from "./data/birds";
+import bonusItems from "./data/bonusItems";
+import './App.css';
+
+
+
+
 const App = () => {
+  const [cart, setCart] = useState([])
+
   return (
-    <div>
-      <h1>Hello, world!</h1>
+    <div className="app">
+      <Cart cart ={cart} bonusItems={bonusItems} setCart={setCart}/>
+      <Checkout setCart={setCart}/>
+      <BirdCards setCart={setCart} cart={cart} birds={birdData}/>
+
     </div>
   );
 };
