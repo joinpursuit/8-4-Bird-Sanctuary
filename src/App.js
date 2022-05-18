@@ -1,24 +1,25 @@
 
 
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import BirdContainer from './Components/BirdContainer';
 import Cart from './Components/Cart';
 import Checkout from './Components/Checkout';
-
-
-
+import './App.css';
 const App = () => {
-  const [cart, setCart] = useState("")
-  let adoptedBirds = []
+  const [cart, setCart] = useState([])
+  const [total, setTotal] = useState([])
   return (
-    <div>
-      <h2>Bird Sanctuary</h2>
-      <main>
-        <BirdContainer setCart = {setCart} adoptedBirds = {adoptedBirds} cart = {cart}/>
-        <Cart cart= {cart} adoptedBirds = {adoptedBirds}/>
-        <Checkout/>
-      </main> 
-  </div>   
+    <div className="grid">
+      <h2 className="title">Bird Sanctuary</h2>
+        <BirdContainer 
+          cart={cart} 
+          setCart={setCart}
+          total={total}
+          setTotal={setTotal}
+          />
+        <Cart className="cart" cart={cart} setCart={setCart} total = {total}/>
+        <Checkout className="checkOut" setCart={setCart} setTotal={setTotal}/>
+    </div>
   );
 };
 

@@ -5,23 +5,25 @@ import birdData from '../data/birds'
 import BirdCard from './BirdCard'
 
 export default function BirdContainer(props) {
-const {setCart, cart, adoptedBirds}= props
+    const { setCart, cart, total, setTotal} = props
     return (
         <div className="birds">
             {birdData.map((bird) => {
                 return (
-                    <BirdCard
+                    <BirdCard 
                         name={bird.name}
                         amount={bird.amount}
                         image={bird.img}
                         id={bird.id}
-                        setCart = {setCart}
-                        adoptedBirds = {adoptedBirds}
-                        cart = {cart}
+                        setCart={setCart}
+                        cart={cart}
+                        total={total}
+                        setTotal={setTotal}
+                        
                     />
-          )
-        }
-    )}
+                )
+            }
+            )}
         </div>
     )
 }

@@ -7,7 +7,7 @@ export default function CartItem(props) {
     const { adopt } = props
     
     return (
-        <div className="cart">
+        <div>
 
         </div>
     )

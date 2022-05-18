@@ -1,3 +1,6 @@
+
+
+
 const birdData = [
   {
     img: "https://cdn.pixabay.com/photo/2020/06/03/13/47/bird-5255017_960_720.jpg",
@@ -11,6 +14,7 @@ const birdData = [
     amount: 200,
     id: 555,
   },
+
   {
     img: "https://i.imgur.com/GacKN4tb.jpg",
     name: "Royal Flycatcher",

@@ -1,28 +1,19 @@
-
 import React, { useState } from 'react'
-import CartItem from './CartItem'
-
 
 export default function BirdCard(props) {
-    const { name, image, amount, id, cart, setCart, adoptedBirds } = props
+    const { name, image, amount, id, cart, setCart, total, setTotal } = props
 
     const adopt = ((event) => {
         event.preventDefault()
-        setCart(`${name} $${amount}`)
-        adoptedBirds.forEach((bird) =>{
-            return<li>birds.name</li>
+        setCart([...cart, `${name} $${amount}`])
+        setTotal([...total, amount])
         })
-        adoptedBirds.push(cart)
-    })
-
     return (
-
-        <div>
-            <h3>{name}</h3>
-            <h4>Price:{amount}</h4>
-            <img src={image} alt="Bird Pic" />
+        <div className="bCard">
+            <h5>{name}</h5>
+            <h6>Price:{amount}</h6>
+            <img className="reveal" height="150 px" width="150" src={image} alt="Bird Pic" /><br/>
             <button onClick={adopt}>Adopt</button>
-            <adopt />
         </div>
     )
 }

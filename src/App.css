@@ -1,0 +1,88 @@
+@keyframes fadeIn{
+    0% { opacity:.01;}
+    100% { opacity:1;}
+}
+
+img {
+    animation-name: fadeIn;
+    animation-duration:4s;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-areas:
+        "t t t t"
+        "a c c c"
+        "a c c c"
+        "b c c c"
+        "b c c c";
+
+    border: 5px dotted yellow;
+}
+
+.title {
+    grid-area: t;
+    text-align: center;
+}
+
+.birds {
+    grid-area: c;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-gap: 4px;
+    padding-left: 5px;
+    text-align: center;
+}
+
+.cart {
+    grid-area: a;
+    border: solid 1px rgb(128, 127, 127);
+    text-align: center;
+    grid-gap: 4px;
+    padding: 2%;
+}
+
+.cart{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+  }
+
+  .cart:hover {
+    box-shadow: 0 8px 16px 0 rgb(57, 56, 56);
+  }
+
+.checkout {
+    grid-area: b;
+    border: solid 1px rgb(128, 127, 127);
+    padding: 2%;
+    text-align: center;
+    grid-gap: 2px;
+}
+
+.checkout{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+  }
+
+  .checkout:hover {
+    box-shadow: 0 8px 16px 0 rgb(57, 56, 56);
+  }
+
+button:hover{
+    transform: scale(1.05);
+    box-shadow: 4px 4px 4px rgb(57, 56, 56);
+}
+
+.bCard {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+  }
+  
+ 
+  .bCard:hover {
+    box-shadow: 0 8px 16px 0 rgb(57, 56, 56);
+  }
+  
+ 
+  
