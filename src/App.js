@@ -10,7 +10,7 @@ const App = () => {
   const [nameArr, setNameArr] = useState([]);//store name
 
 
-  const [totalDiscount, setTotalDiscount] = useState("0");
+  const [totalDiscount, setTotalDiscount] = useState(0);
   //state here - 
   const [currentBonus, setCurrentBonus] = useState([]);
   

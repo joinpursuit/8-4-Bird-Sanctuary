@@ -7,7 +7,7 @@ const Cart = ({ birds, totalAmount, nameArr, bonusItems,totalDiscount,setTotalDi
   const addBonusItem = () => {///where do i put this???
     //console.log(birds)
 
-      if (totalAmount >= 100 && totalAmount <= 300) {
+      if (totalAmount >= 100 && totalAmount < 300) {
         return (<li>{bonusItems[0]}</li>)
       } else if (totalAmount >= 300 && totalAmount <= 500) {
       return ( 
@@ -46,10 +46,18 @@ const Cart = ({ birds, totalAmount, nameArr, bonusItems,totalDiscount,setTotalDi
 
   };
 
+  const addDiscount = () => {
+    if (nameArr.length >= 3 ) {
+      setTotalDiscount(10);
+    }
+  }
+
   return (
     <div className="Cart" >
            {/* <>{addBonusItem(totalAmount, bonusItems)}</> */}
       <h1>Cart</h1>
+      
+      {addDiscount()}
       <p>Discount: {totalDiscount}%</p>
 
       <h4>Total: ${totalAmount}</h4>
