@@ -90,7 +90,7 @@ describe("It can total the birds in the cart", () => {
           console.log(text);
           return text;
         })
-        .should("be.gte", 1980);
+        .should("be.gte", 1890);
     });
   });
 });
