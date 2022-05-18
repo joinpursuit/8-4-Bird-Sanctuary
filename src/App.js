@@ -10,7 +10,7 @@ import bonusItems from './data/bonusItems'
 const App = () => {
 
 const [cartData, setCartData] = useState([]);
-const [total, setTotal] = useState(0)
+
 // let [discount, setDiscount] = useState(0)
 
 
@@ -22,11 +22,12 @@ const [total, setTotal] = useState(0)
       <Cart 
       cartData={cartData}
       bonusItems = {bonusItems}
+      setCartData = {setCartData}
       />
       <Checkout setCartData={setCartData}/>
       </article>
 
-      <BirdCards birdData = {birdData} cartData = {cartData} setCartData ={setCartData} setTotal = {setTotal}/>
+      <BirdCards birdData = {birdData} cartData = {cartData} setCartData ={setCartData} />
 
     </main>
   );

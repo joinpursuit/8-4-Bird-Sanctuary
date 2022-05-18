@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const BirdCard = ({ birdData, cartData, setCartData}) => {
   
@@ -9,9 +9,10 @@ const BirdCard = ({ birdData, cartData, setCartData}) => {
         return (
           <section className="card" key={id}>
             <h3>{name}</h3>
-            <img src={img} />
+            <img src={img} alt = {name}/>
             <p>Price: ${amount}</p>
-            <button onClick = {()=>{if(!cartData.find((bird)=>bird.id === id)){
+            <button onClick = {()=>{
+              if(!cartData.find((bird)=>bird.id === id)){
               setCartData([...cartData,{name, amount, id}])}
               // if(cartData.find((bird)=>bird.id === id)){
               //   setCartData(cartData.filter((bird)=>bird.id !== id

@@ -1,6 +1,6 @@
-import React, {useState} from 'react'
+import React from 'react'
 
-const Cart = ({cartData, bonusItems}) =>{
+const Cart = ({cartData, bonusItems, setCartData}) =>{
   
   
   let discount = 0
@@ -17,7 +17,6 @@ const Cart = ({cartData, bonusItems}) =>{
   const total = beginningTotal - (beginningTotal * (discount/100))
 
   const bonus = () =>{
-    console.log('hello')
     if(total >= 100 && total < 300){
       return <li>{bonusItems[0]}</li>
     }else if(total >= 1000){
@@ -44,8 +43,15 @@ const Cart = ({cartData, bonusItems}) =>{
      </>
      )
   }
-
 }
+const handleDelete = (e) =>{
+  const {value} = e.target
+  const newone = cartData.filter((bird, i)=>i === value)
+  setCartData(newone)
+    console.log(value, newone)
+}
+  // setCartData([...cartData])
+
 
 return(
   <article className='Cart'>
@@ -59,7 +65,10 @@ return(
     <ol>
       {cartData.map((item, i)=>{
         return(
-        <li key ={i}>{item.name} ${item.amount}</li>
+        <>
+        <li key ={i}>{item.name} ${item.amount} <button value = {i} onClick ={handleDelete}>X</button></li>
+        
+        </>
         )
       })
       }
