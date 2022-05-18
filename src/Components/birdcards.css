@@ -1,0 +1,48 @@
+body{
+  background-color: cornflowerblue;
+}
+h1 {
+    text-align: center;
+    font-family: fantasy;
+    color: grey;
+    -webkit-text-stroke: 0.5px black;
+}
+.card {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    float: right;
+    width: 70%;
+  }
+  .birds {
+    width: 300px;
+    height: 400px;
+    padding: 25px;
+    margin: 20px;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+  }
+  
+  .birds img {
+    width: 200px;
+    height: 150px;
+    padding: 20px;
+  }
+
+  .name {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .amount {
+    text-align: center;
+    font-family: cursive;
+  }
+
+  .birds button {
+    background-color: aliceblue;
+  }
