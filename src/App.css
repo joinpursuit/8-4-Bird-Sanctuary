@@ -1,0 +1,39 @@
+.App{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.birds{
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(119, 195, 195);
+    text-align: center;
+    max-height: 500px;
+    grid-template-columns: auto auto auto;
+    grid-auto-rows: auto;
+    grid-auto-columns: auto;
+}
+
+.button{
+    color: black;
+    border-color: black;
+}
+
+.Cart{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+}
+
+.Checkout{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+}
