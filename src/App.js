@@ -3,6 +3,7 @@ import Checkout from "./data/Checkout";
 import Cart from "./data/Cart";
 import { useState } from "react";
 import birdData from "./data/birds";
+import "./App.css";
 
 const App = () => {
   // const [adopt, setAdopt] = useState("");

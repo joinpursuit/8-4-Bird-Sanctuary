@@ -1,0 +1,43 @@
+/* .card {
+    background-color: lightblue;
+}
+
+.Cart {
+    border: 1px solid black;
+} */
+
+/* #root {
+    display: grid;
+    grid-template-areas: 
+    "section main main main"
+    "section main main main"
+    "section main main main";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.Cart {
+    grid-area: section;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.bird {
+    grid-area: main;
+    border: 1px solid black;
+    text-align: center;
+} */
+
+
+/* .main {
+    display: grid;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.left {
+    display: grid;
+    justify-content: left;
+    border: 1px solid black;
+    text-align: center;
+} */
