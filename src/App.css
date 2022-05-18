@@ -1,0 +1,28 @@
+body{
+  display: grid;
+  grid-column: 1/5;
+  padding: 20px;
+  margin: 20px;
+}
+
+form{
+  border: solid black;
+  text-align: center;
+  grid-column: 1/2;
+}
+
+.Cart{
+  border: solid black;
+  text-align: center;
+}
+
+section{
+  background-color: aqua;
+  width: 200px;
+  text-align: center;
+  grid-column: 2/5;
+}
+
+img{
+  width: 150px;
+}
