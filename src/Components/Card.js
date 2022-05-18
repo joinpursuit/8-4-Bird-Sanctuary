@@ -9,7 +9,7 @@ const Card = ({name,img,amount,setTotalAmount,totalAmount, setNameArr,bonusItems
    
 const addToCart = () => {//needs to be in the Card to function. - 
    setTotalAmount(Number(totalAmount + amount));
-   setCurrentPrice(Number(totalAmount));/////ssooo i can use the ttal amount
+   setCurrentPrice(Number(totalAmount));/////ssooo i can use the ttal amount-- cant sent this to Cart. 
    //sent name of the bird
    setNameArr(prev => [...prev, name] );
 

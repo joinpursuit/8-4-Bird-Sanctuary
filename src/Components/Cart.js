@@ -1,11 +1,12 @@
 import react from "react";
 import { useState } from "react";
 
-const Cart = ({ totalAmount, nameArr, bonusItems,totalDiscount,setTotalDiscount,currentBonus }) => {
+const Cart = ({ birds, totalAmount, nameArr, bonusItems,totalDiscount,setTotalDiscount,currentBonus }) => {
  
 
   const addBonusItem = () => {///where do i put this???
-    
+    //console.log(birds)
+
       if (totalAmount >= 100 && totalAmount <= 300) {
         return (<li>{bonusItems[0]}</li>)
       } else if (totalAmount >= 300 && totalAmount <= 500) {
@@ -55,7 +56,13 @@ const Cart = ({ totalAmount, nameArr, bonusItems,totalDiscount,setTotalDiscount,
       <ol>
         {
         nameArr.map((name) => {
-          return <li>{name}</li>;
+          for (let i = 0; i < birds.length; i++){
+            if (name === birds[i].name ) {
+              return <li>{name} ${birds[i].amount}</li>;
+            }
+          }
+          
+          
         })
         }
       </ol>

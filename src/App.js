@@ -19,7 +19,7 @@ return (
   <div>
     <h1>Bird Sanctuary</h1>
     <Birds birds={birdData} setTotalAmount={setTotalAmount} totalAmount={totalAmount} nameArr={nameArr} setNameArr={setNameArr} bonusItems={bonusItems} currentBonus={currentBonus} setCurrentBonus={setCurrentBonus} />
-    <Cart totalAmount={totalAmount} nameArr={nameArr} bonusItems={bonusItems} totalDiscount={totalDiscount} setTotalDiscount={setTotalDiscount} currentBonus={currentBonus}/>
+    <Cart birds={birdData} totalAmount={totalAmount} nameArr={nameArr} bonusItems={bonusItems} totalDiscount={totalDiscount} setTotalDiscount={setTotalDiscount} currentBonus={currentBonus}/>
   </div>
 )
 }
