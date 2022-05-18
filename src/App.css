@@ -17,8 +17,9 @@
     margin: left;
     background-color: rgb(152, 245, 245);
     display: table;
-    float: left;
-    align-items: left
+    float: right;
+    align-items: right
+
     
     
     
@@ -53,3 +54,5 @@
         width: 100%;
     }
 }
+
+/*  */

@@ -1,22 +1,19 @@
-import { useState } from "react";
-import Birds from "./Components/Card";
-import Cart from "./Components/Cart";
+import BirdCards from "./Components/BirdCards";
+import birdData from "./data/birds";
+import bonusItems from "./data/bonusItems";
+import Cart from "./Components/Cart"
 import Checkout from "./Components/Checkout";
-import "./App.css";
+import { useState } from "react";
 
 const App = () => {
-  const [adopt, SetAdopt] = useState("");
-  const [amount, SetAmount] = useState(0);
-
+  const [cart, setCart] = useState([]);
  
+
   return (
     <div>
-      <main>
-      <h1>Bird Sanctuary</h1>
-      <Cart></Cart>
-      <Checkout></Checkout>
-      <Birds></Birds>
-      </main>
+      <BirdCards birdData={birdData} cart={cart} setCart={setCart} />
+      <Cart birdData={birdData} cart={cart} setCart={setCart} bonusItems={bonusItems}/>
+      <Checkout cart={cart} setCart={setCart}/>
     </div>
   );
 };
