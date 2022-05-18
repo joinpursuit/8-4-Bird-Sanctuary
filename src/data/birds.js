@@ -1,3 +1,5 @@
+
+
 const birdData = [
   {
     img: "https://cdn.pixabay.com/photo/2020/06/03/13/47/bird-5255017_960_720.jpg",
@@ -56,5 +58,7 @@ const birdData = [
     id: 2424,
   },
 ];
+
+
 
 export default birdData;
