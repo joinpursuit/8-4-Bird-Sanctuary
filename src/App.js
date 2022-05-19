@@ -12,7 +12,7 @@ const App = () => {
   const [cart, setCart] = useState([])
 
   return (
-    <div>
+    <div className="grid">
       <Cart cart ={cart} bonusItems={bonusItems} setCart={setCart}/>
       <Checkout setCart={setCart}/>
       <BirdCards setCart={setCart} cart={cart} birds={birdData}/>
