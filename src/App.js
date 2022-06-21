@@ -5,6 +5,8 @@ import BirdContainer from './Components/BirdContainer';
 import Cart from './Components/Cart';
 import Checkout from './Components/Checkout';
 import './App.css';
+
+
 const App = () => {
   const [cart, setCart] = useState([])
   const [total, setTotal] = useState([])

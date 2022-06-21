@@ -17,8 +17,6 @@ img {
         "a c c c"
         "b c c c"
         "b c c c";
-
-    border: 5px dotted yellow;
 }
 
 .title {
@@ -30,6 +28,7 @@ img {
     grid-area: c;
     display: grid;
     grid-template-columns:1fr 1fr 1fr;
+    
     grid-gap: 4px;
     padding-left: 5px;
     text-align: center;

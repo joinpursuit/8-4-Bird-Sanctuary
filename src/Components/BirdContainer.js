@@ -4,7 +4,7 @@ import React from 'react'
 import birdData from '../data/birds'
 import BirdCard from './BirdCard'
 
-export default function BirdContainer(props) {
+export default function BirdContainer(props) {//receives props from App.js
     const { setCart, cart, total, setTotal} = props
     return (
         <div className="birds">
@@ -19,11 +19,11 @@ export default function BirdContainer(props) {
                         cart={cart}
                         total={total}
                         setTotal={setTotal}
-                        
                     />
                 )
             }
-            )}
+            )}        {console.log(birdData)}
+
         </div>
     )
 }

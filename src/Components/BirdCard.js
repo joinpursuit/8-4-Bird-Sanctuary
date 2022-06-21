@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
-export default function BirdCard(props) {
-    const { name, image, amount, id, cart, setCart, total, setTotal } = props
+export default function BirdCard(props) {//receives props from App.js
+    const { name, image, amount, cart, setCart, total, setTotal } = props
 
     const adopt = ((event) => {
         event.preventDefault()
