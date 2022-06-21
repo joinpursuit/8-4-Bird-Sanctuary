@@ -2,11 +2,15 @@
     border: solid black 1px;
     width: 300px;
     text-align: center;
+    padding-top: 20px;
+    margin-top: 10px;
 }
 .Cart{
     border: solid black 1px;
     width: 300px;
     text-align: center;
+    padding-top: 20px;
+    margin-top: 10px;
 }
 .container {  
     display: grid;

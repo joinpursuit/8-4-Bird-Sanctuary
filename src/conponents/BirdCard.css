@@ -9,10 +9,15 @@
 
 .img {
     width: 150px;
-
+    height: 150px;
 }
 
 section {
     width: 800px;
 
+}
+h3 {
+    font-size: 2rem;
+    line-height: 1;
+    letter-spacing: -.1rem;
 }
