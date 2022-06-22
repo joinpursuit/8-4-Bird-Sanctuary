@@ -1,0 +1,23 @@
+.card {
+    background-color: aquamarine;
+    border: 1px solid red;
+    text-align: center;
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.img {
+    width: 150px;
+    height: 150px;
+}
+
+section {
+    width: 800px;
+
+}
+h3 {
+    font-size: 2rem;
+    line-height: 1;
+    letter-spacing: -.1rem;
+}

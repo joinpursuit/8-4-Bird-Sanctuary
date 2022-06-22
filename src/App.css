@@ -1,0 +1,36 @@
+.form{
+    border: solid black 1px;
+    width: 300px;
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 10px;
+}
+.Cart{
+    border: solid black 1px;
+    width: 300px;
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 10px;
+}
+.container {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px 0px;
+    grid-template-areas:
+        "cart birds birds"
+        "form birds birds";
+  }
+  
+  .cart { grid-area: cart; }
+  
+  .form { grid-area: form; }
+  
+  .birdcard { grid-area: birds; }
+  
+  section{
+    display: flex;
+    flex-direction: row;
+    flex-basis: auto;
+    flex-wrap: wrap;
+  }
