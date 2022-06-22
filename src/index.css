@@ -1,0 +1,56 @@
+.grid {
+  display: grid;
+  grid-template-areas:
+    "a c c c"
+    "b c c c";
+}
+
+ul {
+  list-style-type: none;
+}
+
+.birds {
+  grid-area: c;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 4px;
+  padding-left: 5px;
+  text-align: center;
+  background-color: teal;
+  color: white;
+  box-sizing: content-box;
+  height: min-content;
+}
+.Cart {
+  grid-area: a;
+  border: solid 1px rgb(128, 127, 127);
+  text-align: center;
+  grid-gap: 4px;
+  padding: 2%;
+  box-sizing: content-box;
+  height: min-content;
+}
+
+.Cart button {
+  color: black;
+}
+
+.Checkout {
+  grid-area: b;
+  border: solid 1px rgb(128, 127, 127);
+  padding: 2%;
+  text-align: center;
+  grid-gap: 2px;
+  box-sizing: content-box;
+  height: max-content;
+  margin: 5px;
+}
+
+button {
+  color: white;
+}
+
+.bird button:hover {
+  box-shadow: 4px 4px 4px rgb(57, 56, 56);
+  color: whitesmoke;
+}
