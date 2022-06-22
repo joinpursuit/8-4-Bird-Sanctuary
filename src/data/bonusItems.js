@@ -1,3 +1,4 @@
+
 const bonusItems = [
   "Stickers",
   "Background for your computer",
